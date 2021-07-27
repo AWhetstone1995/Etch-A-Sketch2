@@ -70,7 +70,10 @@ function changeColor(e) {
 
 function changeGridSize() {
     let newSize = prompt("Enter new grid size");
-    if(newSize<1 || newSize > 100 || Number.isNaN(newSize)) {
+    console.log(Number.isNaN(newSize));
+
+    newSize = parseInt(newSize);
+    if(newSize<1 || newSize > 100 || typeof(newSize) === 'number') {
         alert("Enter a number from 1-100");
         changeGridSize();
     } else {
