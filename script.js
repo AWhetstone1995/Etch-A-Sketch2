@@ -56,7 +56,7 @@ function createGrid(size) {
     for (let i = 0; i < size*size; i++) {
         const gridSquare = document.createElement('div');
         gridSquare.classList = 'grid-square';
-        gridSquare.addEventListener('mouseover', changeColor);
+        gridSquare.addEventListener('mouseover', "touchmove", changeColor);
         gridContainer.appendChild(gridSquare);
     }
 }
