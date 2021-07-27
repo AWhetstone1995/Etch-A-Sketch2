@@ -73,7 +73,7 @@ function changeGridSize() {
     console.log(Number.isNaN(newSize));
 
     newSize = parseInt(newSize);
-    if(newSize<1 || newSize > 100 || typeof(newSize) === 'number') {
+    if(newSize<1 || newSize > 100 || typeof(newSize) !== 'number') {
         alert("Enter a number from 1-100");
         changeGridSize();
     } else {
